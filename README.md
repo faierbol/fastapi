@@ -1,39 +1,20 @@
-# domain
+# App name
 
-Чтобы запустить backend нужно:
+To start backend you need:
 
-1. Имень установлен Docker https://download.docker.com/mac/stable/Docker.dmg
+1. Name set Docker https://download.docker.com/mac/stable/Docker.dmg
 
-2. Для удобства я храню все env var в одном файле .env.dev, который нужно заполнить
+2. For convenience, I store all env vars in one .env.dev file that needs to be populated
 
-3. Ввести в терминале
+3. Enter in terminal
 
 ```console
 docker-compose -f docker-compose.dev.yml up -d --build
 ```
 
-4.Фсё
 
 # Wiki
-Чтобы заглянуть в логи нужно ввести в консоль `docker-compose logs -f`
-или можно посмотреть логи с конкретного контейнера, пример для контейнера с сервером Django `docker-compose logs -f backend`
+To look at the logs, you need to type in the console `docker-compose logs -f`
+or you can view logs from a specific container, for example for a container with a server `docker-compose logs -f backend`
 
-Вот так можно вводить команды внутри контейнеров `docker-compose -f docker-compose.yml exec backend python manage.py migrate`
-
-Если по какой-то причине хочется запустить Django без NGINX в виде прохи и сервера для статики то такая возможность тоже учтена
-
-просто из директории `backend` нужно сделать следующее
-
-```console
-docker build -f ./Dockerfile -t backend:latest .
-
-Successfully built bla-bla-bla
-Successfully tagged backend:latest
-
-docker run -d \
-    -p 8006:8000 \
-    -e "SECRET_KEY=please_change_me" -e "DEBUG=1" -e "DJANGO_ALLOWED_HOSTS=*" \
-    backend python /home/share/backend/manage.py runserver 0.0.0.0:8000
-```
-
-после чего сервер будет доступен по адресу http://127.0.0.1:8006/
+This is how you can enter commands inside containers `docker-compose -f docker-compose.yml exec backend python manage.py migrate`
