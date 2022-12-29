@@ -1,4 +1,4 @@
-# phoqer
+# domain
 
 Чтобы запустить backend нужно:
 
@@ -25,7 +25,7 @@ docker-compose -f docker-compose.dev.yml up -d --build
 просто из директории `backend` нужно сделать следующее
 
 ```console
-docker build -f ./Dockerfile -t backend:latest . 
+docker build -f ./Dockerfile -t backend:latest .
 
 Successfully built bla-bla-bla
 Successfully tagged backend:latest

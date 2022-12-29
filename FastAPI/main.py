@@ -13,8 +13,8 @@ from FastAPI.users import users
 
 origins = [
     "http://localhost:4000",
-    "http://phoqer.com",
-    "https://phoqer.com",
+    "http://domain.com",
+    "https://domain.com",
     "http://140.82.39.245",
     "https://140.82.39.245",
 ]

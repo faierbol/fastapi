@@ -179,5 +179,5 @@ backend/mediafiles/*
 
 # postgress docker volume
 postgres_data
-phoqer.bak
-phoqer.dump
+domain.bak
+domain.dump

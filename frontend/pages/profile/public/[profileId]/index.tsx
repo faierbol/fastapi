@@ -59,7 +59,7 @@ const PublicProfilePage = (): ReactElement => {
                 <Container>
                     {profile ? <>
                         <Meta title={profile?.first_name + ' ' + profile?.last_name}
-                              h1={trans('user_profile_on_phoqer')}/>
+                              h1={trans('user_profile_on_domain')}/>
                         <div className={css.wrp}>
                             <div className={css.left}>
                                 <ProfileCard

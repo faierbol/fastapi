@@ -45,7 +45,7 @@ const Private = (): ReactElement => {
 
     return (
         <>
-            <Meta title={trans('personal_area')} h1={trans('user_profile_on_phoqer')} />
+            <Meta title={trans('personal_area')} h1={trans('user_profile_on_domain')} />
             <PageLayout>
                 <Container>
                     <>

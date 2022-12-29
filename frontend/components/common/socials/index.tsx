@@ -78,7 +78,7 @@ const Socials = ({ center = false, style = {} }: IProps): ReactElement => {
                 <li>
                     <a
                         className={clsx(css.link, center && css.margin)}
-                        href="https://www.facebook.com/phoqer.inc"
+                        href="https://www.facebook.com/domain.inc"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -96,7 +96,7 @@ const Socials = ({ center = false, style = {} }: IProps): ReactElement => {
                 <li>
                     <a
                         className={clsx(css.link, center && css.margin)}
-                        href="https://www.instagram.com/phoqer/"
+                        href="https://www.instagram.com/domain/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -128,7 +128,7 @@ const Socials = ({ center = false, style = {} }: IProps): ReactElement => {
                 <li>
                     <a
                         className={clsx(css.link, center && css.margin)}
-                        href="https://t.me/phoqer"
+                        href="https://t.me/domain"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

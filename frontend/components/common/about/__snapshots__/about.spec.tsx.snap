@@ -61,7 +61,7 @@ exports[`About component matches snapshot 1`] = `
                   srcset="/about/camera1920.jpeg"
                 />
                 <img
-                  alt="phoqer"
+                  alt="domain"
                   class="img-0-2-3"
                   src="/about/camera.jpeg"
                 />
@@ -133,7 +133,7 @@ exports[`About component matches snapshot 1`] = `
                   srcset="/about/camera1920.jpeg"
                 />
                 <img
-                  alt="phoqer"
+                  alt="domain"
                   class="img-0-2-3"
                   src="/about/camera.jpeg"
                 />
@@ -189,7 +189,7 @@ exports[`About component matches snapshot 1`] = `
     <h2
       class="title-0-2-4"
     >
-      phoqer
+      domain
     </h2>
     <div
       class="content-0-2-5"

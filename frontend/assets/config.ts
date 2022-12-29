@@ -12,13 +12,13 @@ import routes from './routes';
 
 const config = {
     baseUrl: {
-        development: (version = 'v1'): string => 'http://phoqer.com/api/' + version,
-        test: (version = 'v1'): string => 'http://phoqer.com/api/' + version,
-        production: (version = 'v1'): string => (process.browser ? 'http://phoqer.com/api/' + version : 'http://backend:8001'),
+        development: (version = 'v1'): string => 'http://domain.com/api/' + version,
+        test: (version = 'v1'): string => 'http://domain.com/api/' + version,
+        production: (version = 'v1'): string => (process.browser ? 'http://domain.com/api/' + version : 'http://backend:8001'),
     },
-    uploadsUrl: (version = 'v2'): string => `http://phoqer.com/api/${version}/upload`,
-    host: (lang = 'pl'): string => `http://phoqer.com${lang === 'pl' ? '' : '/' + lang}`,
-    img: 'http://phoqer.com',
+    uploadsUrl: (version = 'v2'): string => `http://domain.com/api/${version}/upload`,
+    host: (lang = 'pl'): string => `http://domain.com${lang === 'pl' ? '' : '/' + lang}`,
+    img: 'http://domain.com',
     themes: ['blue', 'green', 'aqua', 'violet', 'black-blue', 'black-violet', 'black-orange', 'black-aqua'] as Themes[],
     offers: {
         grid: {

@@ -22,7 +22,7 @@ const ConfigProvider = ({ children, value }: IProps): ReactElement => {
     const [config, setConfig] = useState<IConfig>(value || init);
     const handleConfig = (data: IConfig): void => {
         try {
-            Cookies.set('phoqer_config', JSON.stringify(data));
+            Cookies.set('domain_config', JSON.stringify(data));
             setConfig(data);
         } catch (error) {
             notificationsModal('error');

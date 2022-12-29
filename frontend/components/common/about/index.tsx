@@ -192,12 +192,12 @@ const About = (): ReactElement => {
                         <source media="(max-width: 1280px)" srcSet={item.src1280} />
                         <source media="(max-width: 1280px)" srcSet={item.src1280} />
                         <source media="(max-width: 1920px)" srcSet={item.src1920} />
-                        <img className={css.img} src={item.src} alt="phoqer" />
+                        <img className={css.img} src={item.src} alt="domain" />
                     </picture>
                 ))}
             </Slider>
 
-            <h2 className={css.title}>phoqer</h2>
+            <h2 className={css.title}>domain</h2>
             <div className={css.content}>
                 <p className={css.text}>{trans('about_1')}</p>
                 <p className={css.text}>{trans('about_2')}</p>

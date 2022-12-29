@@ -40,7 +40,7 @@ module.exports = {
         defaultLocale: 'pl',
     },
     images: {
-        domains: ['phoqer.com'],
+        domains: ['domain.com'],
     },
     ...pwa,
 };

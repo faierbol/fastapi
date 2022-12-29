@@ -82,7 +82,7 @@ const ChatSidebar = ({ chats }: IProps): ReactElement => {
                 </>
             )}
             <div className={css.end}>
-                <h5>Phoqer</h5>
+                <h5>domain</h5>
                 <p>© 2021</p>
                 <p>All rights reserved</p>
             </div>

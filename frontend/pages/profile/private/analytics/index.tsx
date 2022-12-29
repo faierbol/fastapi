@@ -34,7 +34,7 @@ const Analytics = (): ReactElement => {
 
     return (
         <>
-            <Meta title={trans('analytics')} h1={trans('user_profile_on_phoqer')} />
+            <Meta title={trans('analytics')} h1={trans('user_profile_on_domain')} />
             <AuthRedirect />
             <PageLayout>
                 <Container>

@@ -39,7 +39,7 @@ const MessagesChat = (): ReactElement => {
 
     return (
         <>
-            <Meta title={'Мои сообщения'} h1={trans('user_profile_on_phoqer')} />
+            <Meta title={'Мои сообщения'} h1={trans('user_profile_on_domain')} />
 
             <AuthRedirect />
             <main className={css.main}>

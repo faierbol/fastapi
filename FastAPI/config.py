@@ -4,11 +4,11 @@ import databases
 
 ALGORITHM = "HS256"
 
-PG_DB = os.environ.get("POSTGRES_DB", "phoqer_dev")
+PG_DB = os.environ.get("POSTGRES_DB", "domain_dev")
 PG_HOST = os.environ.get("POSTGRES_HOST", "localhost")
 PG_PASSWORD = os.environ.get("POSTGRES_PASSWORD", "apple-b@nana-f1re")
 PG_PORT = os.environ.get("POSTGRES_PORT", "5432")
-PG_USER = os.environ.get("POSTGRES_USER", "phoqer")
+PG_USER = os.environ.get("POSTGRES_USER", "domain")
 
 DATABASE_URL = f"postgresql://{PG_USER}:{PG_PASSWORD}@{PG_HOST}:{PG_PORT}/{PG_DB}"
 database = databases.Database(DATABASE_URL)
@@ -26,7 +26,7 @@ SMTP_HOST = os.environ.get("EMAIL_HOST", "smtp.office365.com")
 SMTP_USER = os.environ.get("EMAIL_HOST_USER")
 SMTP_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 EMAILS_FROM_EMAIL = "foosking@outlook.com"
-EMAILS_FROM_NAME = "Phoqer"
+EMAILS_FROM_NAME = "domain"
 
 MEDIA_URL = "mediafiles"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

@@ -69,7 +69,7 @@ MyApp.getInitialProps = async (appContext: AppContextType<Router>): Promise<IPro
     const isMobile = toMatch.test(appContext?.ctx?.req?.headers?.['user-agent'] || '');
 
     // ui
-    const theme = parseCookie<Themes>(appContext?.ctx?.req?.headers?.cookie, 'phoqer_theme', true);
+    const theme = parseCookie<Themes>(appContext?.ctx?.req?.headers?.cookie, 'domain_theme', true);
     const props = await App.getInitialProps(appContext);
 
     // auth
@@ -77,7 +77,7 @@ MyApp.getInitialProps = async (appContext: AppContextType<Router>): Promise<IPro
     if (auth?.access_token) axios.defaults.headers.common.Authorization = `Bearer ${auth?.access_token}`;
 
     // config
-    const config = parseCookie<IConfig>(appContext?.ctx?.req?.headers?.cookie, 'phoqer_config');
+    const config = parseCookie<IConfig>(appContext?.ctx?.req?.headers?.cookie, 'domain_config');
 
     // end
     return { ...props, width: isMobile ? 500 : 1400, auth, theme, config };

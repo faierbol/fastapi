@@ -23,7 +23,7 @@ const SiteTheme = ({ children, siteTheme = 'blue' }: IProps): ReactElement => {
 
     const handleTheme = (value: Themes): void => {
         try {
-            Cookies.set('phoqer_theme', value);
+            Cookies.set('domain_theme', value);
             if (document.querySelector('html')) {
                 document.querySelector('html')?.classList?.remove(theme);
                 document.querySelector('html')?.classList?.add(value);

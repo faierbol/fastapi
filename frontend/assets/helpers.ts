@@ -115,7 +115,7 @@ export const throttle = (func: IFunction, time = 0): IFunction => {
 //  4. Work with cookies
 // ----------------------------------------------
 // Parse cookie on server. Generate valid js object from cookies string
-export const parseCookie = <T>(value = '', key = 'phoqer_auth', parsed = false): T | null => {
+export const parseCookie = <T>(value = '', key = 'domain_auth', parsed = false): T | null => {
     try {
         return parsed ? cookie.parse(value)[key] || null : JSON.parse(cookie.parse(value)[key]);
     } catch (error) {
@@ -132,7 +132,7 @@ export const parseCookie = <T>(value = '', key = 'phoqer_auth', parsed = false):
 export const logger = (): void => {
     if (process.env.NODE_ENV === 'production' && process.browser) console.clear();
     console.log(
-        '%c Phoqer %c v0.0.1 Made with love ...',
+        '%c domain %c v0.0.1 Made with love ...',
         'padding: 6px 15px; border-radius: 10px; background: #eee; text-transform: uppercase; color: #007aff; font-size: 1rem; font-weight: 600; font-family: Montserrat, sans-serif',
         'color: #DB162F; font-size: 0.8rem;',
     );

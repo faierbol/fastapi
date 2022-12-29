@@ -44,7 +44,7 @@ const Reviews = (): ReactElement => {
 
     return (
         <>
-            <Meta title={trans('reviews')} h1={trans('user_profile_on_phoqer')} />
+            <Meta title={trans('reviews')} h1={trans('user_profile_on_domain')} />
             <AuthRedirect />
             <PageLayout>
                 <Container>

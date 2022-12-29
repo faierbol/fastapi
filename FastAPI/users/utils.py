@@ -60,16 +60,16 @@ def send_new_account_email(
     username: str,
     activation_token: str,
 ) -> None:
-    subject = f"Phoqer - New account for user {username}"
+    subject = f"domain - New account for user {username}"
     with open(os.path.join(os.getcwd(), "email-templates/build/new_account.html")) as f:
         template_str = f.read()
-    link = f"http://phoqer.com/api/v2/users/activation/{activation_token}"
+    link = f"http://domain.com/api/v2/users/activation/{activation_token}"
     send_email(
         email_to=email_to,
         subject_template=subject,
         html_template=template_str,
         environment={
-            "project_name": "Phoqer",
+            "project_name": "domain",
             "username": username,
             "email": email_to,
             "link": link,

@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Checkout Phoqer
+      - name: Checkout domain
         uses: actions/checkout@v2
       - name: Install dependencies
         run: npm install
