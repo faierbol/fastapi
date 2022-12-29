@@ -1,0 +1,55 @@
+version: '3.7'
+
+services:
+  backend:
+    container_name: backend
+    image: "${BACKEND_IMAGE}"
+    command: uvicorn main:app --root-path /api/v2 --reload --workers 1 --host 0.0.0.0 --port 8001
+    volumes:
+      - media_volume:/phoqer/FastAPI/mediafiles/
+    expose:
+      - 8001
+    env_file:
+      - ./.env.dev
+  frontend:
+    container_name: frontend
+    image: "${FRONTEND_IMAGE}"
+    expose:
+      - 4000
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - backend
+  db:
+    container_name: db
+    image: postgres:12.0-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .env.dev
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    env_file:
+      - ./.env.dev
+    volumes:
+      - pgadmin:/root/.pgadmin
+    expose:
+      - 5050
+    restart: unless-stopped
+  nginx:
+    container_name: nginx
+    image: "${NGINX_IMAGE}"
+    volumes:
+      - media_volume:/phoqer/FastAPI/mediafiles/
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+      - frontend
+      - pgadmin
+
+volumes:
+  postgres_data:
+  media_volume:
+  pgadmin:
