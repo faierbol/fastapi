@@ -2,7 +2,7 @@
 
 To start backend you need:
 
-1. Name set Docker https://download.docker.com/mac/stable/Docker.dmg
+1. Install Docker https://download.docker.com/mac/stable/Docker.dmg
 
 2. For convenience, I store all env vars in one .env.dev file that needs to be populated
 
